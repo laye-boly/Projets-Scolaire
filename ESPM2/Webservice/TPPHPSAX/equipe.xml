@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="statistiques.xsl"?>
+<statistiques_equipe>
+	<equipe nom="Milan">
+		<victoires>100</victoires>
+		<defaites>2</defaites>
+		<classement>1</classement>
+	</equipe>
+	<equipe nom="Milan">
+		<victoires>80</victoires>
+		<defaites>2</defaites>
+		<classement>5</classement>
+	</equipe>
+
+	<equipe nom="Chelsea">
+		<victoires>70</victoires>
+		<defaites>2</defaites>
+		<classement>9</classement>
+	</equipe>
+	<equipe nom="Real Madrid">
+		<victoires>60</victoires>
+		<defaites>2</defaites>
+		<classement>2</classement>
+	</equipe>
+	<equipe nom="Barcelone">
+		<victoires>50</victoires>
+		<defaites>2</defaites>
+		<classement>4</classement>
+	</equipe>
+	<equipe nom="Bayern">
+		<victoires>40</victoires>
+		<defaites>2</defaites>
+		<classement>11</classement>
+	</equipe>
+	<equipe nom="Dortmund">
+		<victoires>30</victoires>
+		<defaites>2</defaites>
+		<classement>6</classement>
+	</equipe>
+	<equipe nom="Paris SG">
+		<victoires>20</victoires>
+		<defaites>2</defaites>
+		<classement>7</classement>
+	</equipe>
+	<equipe nom="Marseille">
+		<victoires>10</victoires>
+		<defaites>2</defaites>
+		<classement>3</classement>
+	</equipe>
+	<equipe nom="Ajax">
+		<victoires>9</victoires>
+		<defaites>2</defaites>
+		<classement>8</classement>
+	</equipe>
+	<equipe nom="Liverpool">
+		<victoires>8</victoires>
+		<defaites>2</defaites>
+		<classement>10</classement>
+	</equipe>
+	
+</statistiques_equipe> 

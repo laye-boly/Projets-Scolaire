@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<restaurant>
+	<coordonnees>
+		<nom>LA LINGUERE</nom>
+		<adresse>Ouest Foire</adresse>
+		<nom_restaurateur>Oumou</nom_restaurateur>
+		<descript>
+			<liste>
+				<elementList>Mon element 1 liste 1</elementList>
+				<elementList>Mon element 2 liste 1</elementList>
+				<elementList>Mon element 3 liste 1</elementList>
+			</liste>
+			<!-- <pi>une partie importante n°1 de la descrition du restau</pi> -->
+			<paragraphe>
+				<texte>
+
+1914 translation by H. Rackham
+"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do 
+
+"</texte>

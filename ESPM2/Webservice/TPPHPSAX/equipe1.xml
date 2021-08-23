@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="statistiques.xsl"?>
+<statistiques_equipe>
+	<equipe nom="Milan">
+		<victoires>100</victoires>
+		<defaites>2</defaites>
+		<classement>1</classement>
+	</equipe>	
+</statistiques_equipe> 

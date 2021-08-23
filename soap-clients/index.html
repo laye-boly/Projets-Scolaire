@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Conversion de devises</title>
+</head>
+<body>
+	<h1>Conversion de devise</h1>
+	<form method="post" action="money-convertor-soap.php?devise=euro">
+		<fieldset>
+			<legend>Conversion Euro</legend>
+			<label>Montant</label>
+			<input type="text" name="montant" placeholder="montant en Euro">
+			<input type="submit" value="Convertir">
+		</fieldset>
+	</form>
+	<form method="post" action="money-convertor-soap.php?devise=cfa">
+		<fieldset>
+			<legend>Conversion CFA</legend>
+			<label>Montant</label>
+			<input type="text" name="montant" placeholder="montant en CFA">
+			<input type="submit" value="Convertir">
+		</fieldset>
+	</form>
+</body>
+</html>

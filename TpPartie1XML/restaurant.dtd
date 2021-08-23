@@ -1,0 +1,28 @@
+<!ELEMENT restaurant (coordonnees,carte,menus?)>
+<!ELEMENT coordonnees (nom,adresse,nom_restaurateur,decription?)>
+<!ELEMENT nom(#PCDATA)>
+<!ELEMENT adresse(#PCDATA)>
+<!ELEMENT nom_restaurateur(#PCDATA)>
+<!ELEMENT description(liste|paragraphe|pi)*>
+<!ELEMENT paragraphe(texte,image*)>
+<!ELEMENT image (EMPTY)>
+<!ATTLIST image position (centré|gauche|droite) #REQUIRED>
+<!ATTLIST image url (CDATA) #REQUIRED>
+<!ELEMENT texte(#PCDATA)>
+<!ELEMENT liste(#PCDATA)>
+<!ELEMENT pi(#PCDATA)>
+
+
+<!ELEMENT carte(plat+)>
+<!ELEMENT plat(description_plat?,prix)*>
+
+<!ELEMENT description_plat(#PCDATA,partie_importante)>
+<!ELEMENT partie_important(#PCDATA)>
+<!ELEMENT prix EMPTY>
+<!ATTLIST prix devise (CDATA) #REQUIRED>
+<!ATTLIST prix valeur (CDATA) #REQUIRED>
+<!ATTLIST plat indication (entre|dessert|plat|fromage) #REQUIRED>
+<!ELEMENT menus(menu+)>
+<!ATTLIST menus orde (pluscher|pluspetit|aleatoire) #REQUIRED>
+<!ELEMENT menu(plat+)>
+<!ATTLIST menu titre (CDATA) #REQUIRED>

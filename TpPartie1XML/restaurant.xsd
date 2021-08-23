@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="restaurant">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="coordonnees"/>
+        <xs:element ref="carte"/>
+        <xs:element minOccurs="0" ref="menus"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="coordonnees">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nom"/>
+        <xs:element ref="adresse"/>
+        <xs:element ref="nom_restaurateur"/>
+        <xs:element minOccurs="0" ref="descript"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nom" type="xs:string"/>
+  <xs:element name="adresse" type="xs:string"/>
+  <xs:element name="nom_restaurateur" type="xs:string"/>
+  <xs:element name="descript">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="liste"/>
+        <xs:element ref="paragraphe"/>
+        <xs:element ref="pi"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="paragraphe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="texte"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="image"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="image">
+    <xs:complexType>
+      <xs:attributeGroup ref="attlist.image"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.image">
+    <xs:attribute name="position" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="centré"/>
+          <xs:enumeration value="gauche"/>
+          <xs:enumeration value="droite"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="url" use="required" type="xs:string"></xs:attribute>
+  </xs:attributeGroup>
+  <xs:element name="texte" type="xs:string"/>
+  <xs:element name="elementList" type="xs:string"/>
+  <xs:element name="liste">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="elementList"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="li" type="xs:string"/>
+  <xs:element name="pi" type="xs:string"/>
+  <xs:element name="carte">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="plat"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="plat">
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element minOccurs="0" ref="description_plat"/>
+        <xs:element ref="prix"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="attlist.plat"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="description_plat">
+      <xs:complexType mixed="true">
+      <xs:sequence>
+          <xs:element name="partie_importante" type="xs:string"/>
+        </xs:sequence>
+       </xs:complexType>
+    </xs:element>
+  <xs:element name="partie_importante" type="xs:string"/>
+  <xs:element name="prix">
+    <xs:complexType>
+      <xs:attributeGroup ref="attlist.prix"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.prix">
+    <xs:attribute name="devise" use="required" type="xs:string"></xs:attribute>
+    <xs:attribute name="valeur" use="required" type="xs:decimal"></xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="attlist.plat">
+    <xs:attribute name="indication" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="entre"/>
+          <xs:enumeration value="dessert"/>
+          <xs:enumeration value="plat"/>
+          <xs:enumeration value="fromage"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:element name="menus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="menu"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="attlist.menus"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.menus">
+    <xs:attribute name="ordre" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="pluscher"/>
+          <xs:enumeration value="pluspetit"/>
+          <xs:enumeration value="aleatoire"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:element name="menu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="plat"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="attlist.menu"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.menu">
+    <xs:attribute name="titre" use="required" type="xs:string"></xs:attribute>
+  </xs:attributeGroup>
+</xs:schema>

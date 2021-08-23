@@ -1,0 +1,5 @@
+performance = n
+
+expérience professionnelles, age, salaire, niveau d'etude, temps de trajet pour se rendre à la boutique, situation matrimoniale, nombre d'heures de travail, sécurité sociale, 
+
+Comment classer les vendeurs, entre duex vendeurs quels est celui qui est le plus formant

@@ -1,0 +1,1 @@
+Votre restaurant a été bien uploadé. Patientez pour sa validation
